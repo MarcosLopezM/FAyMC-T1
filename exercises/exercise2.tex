@@ -79,7 +79,7 @@
                 \begin{empheq}[box = \color{customBlue}\fbox]{align*}
                     \lambda_{1} &= 1 - \epsilon,\\
                     \lambda_{2} &= \frac{1}{2}\left(3 + \sqrt{1 + 4\epsilon^{2}}\right),\\
-                    \lambda_{2} &= \frac{1}{2}\left(3 - \sqrt{1 + 4\epsilon^{2}}\right).
+                    \lambda_{3} &= \frac{1}{2}\left(3 - \sqrt{1 + 4\epsilon^{2}}\right).
                 \end{empheq}
 
                 Haciendo la expansión de Taylor correspondiente para cada uno de los eigenvalores tenemos que
@@ -95,7 +95,7 @@
                 \begin{empheq}[box = \color{pinkwave}\widefbox]{equation}
                     \begin{alignedat}{1}
                         \omega_{1} &= V_{0}(1 - \epsilon),\\
-                        \omega_{2} &\simeq V_{0}(2 - \epsilon^{2}),\\
+                        \omega_{2} &\simeq V_{0}(2 + \epsilon^{2}),\\
                         \omega_{3} &\simeq V_{0}(1 - \epsilon^{2}).
                     \end{alignedat}
                     \label{eq:hamiltonian-eigenvalues}
@@ -183,7 +183,7 @@
                 Comparando el valor de \(E_{3}\) con el resultado obtenido en \cref{eq:hamiltonian-eigenvalues} observamos que es lo mismo, \idest
 
                 \begin{empheq}[box = \color{pinkwave}\widefbox]{equation*}
-                    E_{3} \simeq V_{0}(2 + \epsilon^{2}) = V_{0}(2 + \epsilon^{2}) \simeq \omega_{3}.
+                    E_{3} \simeq V_{0}(2 + \epsilon^{2}) = V_{0}(2 + \epsilon^{2}) \simeq \omega_{2}.
                 \end{empheq}
             \end{solution}
             
@@ -193,14 +193,14 @@
                 Recordamos que la corrección primer orden de la energía para el caso degenerado viene dada por
 
                 \begin{equation}
-                    E_{\pm}^{(1)} = \frac{1}{2}\left[W_{aa} + W_{bb} \pm \sqrt{(W_{aa} - W_{bb})^{2} - 4\abs{W_{ab}}^{2}}\right],
+                    E_{\pm}^{(1)} = \frac{1}{2}\left[W_{aa} + W_{bb} \pm \sqrt{(W_{aa} - W_{bb})^{2} + 4\abs{W_{ab}}^{2}}\right],
                     \label{eq:degeneracy-energy-correction-first-order}
                 \end{equation}
 
                 donde
 
                 \begin{equation*}
-                    W_{ij} = \matrixel{\psi_{i}^{(0)}}{\observable{W}}{\psi_{j}^{(a)}}.
+                    W_{ij} = \matrixel{\psi_{i}^{(0)}}{\observable{W}}{\psi_{j}^{(0)}}.
                 \end{equation*}
 
                 Debemos obtener \(W_{aa},\ W_{bb}\) y \(W_{ab}\),
@@ -233,7 +233,7 @@
                 &= V_{0} \epsilon \begin{pmatrix}
                     0 & 1 & 0
                 \end{pmatrix}\matrice[1]{0, 0, 0},\nonumber\\
-                \Aboxedmain{W_{aa} &= 0.}\label{eq:element-Wbb}
+                \Aboxedmain{W_{bb} &= 0.}\label{eq:element-Wbb}
             \end{align}
 
             \begin{align}
@@ -243,7 +243,7 @@
                 &= V_{0} \epsilon \begin{pmatrix}
                     1 & 0 & 0
                 \end{pmatrix}\matrice[1]{0, 0, 1},\nonumber\\
-                \Aboxedmain{W_{aa} &= 0.}\label{eq:element-Wab}
+                \Aboxedmain{W_{ab} &= 0.}\label{eq:element-Wab}
             \end{align}
 
             Sustituyendo \crefrange{eq:element-Waa}{eq:element-Wab} en \cref{eq:degeneracy-energy-correction-first-order},
